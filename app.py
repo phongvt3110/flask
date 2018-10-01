@@ -21,9 +21,9 @@ def signup():
     _address = request.form['inputAddress']
     _phone  = request.form['inputPhone']
     if _name and _email and _password:
-        return json.dump({'html':'<span>All fields good !!</span>'})
+        return json.dumps({'html':'<span>All fields good !!</span>'})
     else:
-        return json.dump({'html':'<span>Enter the required fields</span>'})
+        return json.dumps({'html':'<span>Enter the required fields</span>'})
     return render_template('admin/index.html')
 
 if __name__ == "__main__":
